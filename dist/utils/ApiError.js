@@ -1,12 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ApiError = void 0;
 class ApiError extends Error {
-    statusCode;
-    data;
-    success;
-    errors;
-    stack;
     constructor(statusCode, message = "Something went wrong", errors = [], stack = "") {
         super(message);
         this.statusCode = statusCode;
@@ -22,4 +14,4 @@ class ApiError extends Error {
         }
     }
 }
-exports.ApiError = ApiError;
+export { ApiError };
